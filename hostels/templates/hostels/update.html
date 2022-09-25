@@ -1,0 +1,13 @@
+<html>
+    <head><title>update</title></head>
+    <body>
+        <h1>Update employee : {{form.instance.name}}</h1>
+        <form method="post" action="/hostels/{{form.instance.id}}/update/">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type='submit' value='Save'>
+        </form>
+        <a href="{% url 'hostels:hostel' form.instance.id %}">Back</a>
+    </body>
+</html>
+

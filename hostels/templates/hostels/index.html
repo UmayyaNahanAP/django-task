@@ -1,0 +1,22 @@
+<html>
+<head><title>Employee</title></head>
+<body>
+    <h1>Hostel Employees:</h1>
+    <p>Logged in as {{request.user}}</p>
+    <a href="/logout/">Logout</a>
+    <hr>
+    <ol>
+        {% for hostel in hostels %}
+           <Li> {{hostel}} </li>
+        {% endfor %}
+    </ol>
+    <ol>
+        {% for emp in employee %}
+            <Li>
+                <a href="{% url 'hostels:details' emp.id %}">{{emp}}</a>
+            </li>
+        {% endfor %}
+    </ol>
+    <a href="{% url 'hostels:new' %}">Create</a>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>{{employee.name}}</title>
+    </head>
+<body>
+    <h1>{{employee.name}}</h1>
+    <hr>
+    <p>Name:{{employee.name}}</p>
+    <p>Age : {{employee.age}}</p>
+    <p>Department : {{employee.department}}</p>
+    <p>Salary : {{employee.salary}}</p>
+    <a href="{% url 'hostels:hostel'  %}">Back</a>
+    <a href="{% url 'hostels:update' employee.id%}">Edit</a>
+    <a href="{% url 'hostels:delete' employee.id%}">Delete</a>
+</body>
+</html>
